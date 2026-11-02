@@ -5,7 +5,7 @@ require('dotenv').config();
 const { supabase, supabaseAdmin } = require('./supabase');
 
 const app = express();
-const PORT = 5002;
+const PORT = process.env.PORT || 5002;
 console.log('REGISTERING TEST ROUTE');
 
 app.get('/api/test-route', (req, res) => {
