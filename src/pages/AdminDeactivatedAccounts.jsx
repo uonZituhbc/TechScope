@@ -58,7 +58,7 @@ function AdminDeactivatedAccounts() {
             }
 
             const response = await fetch(
-                'http://localhost:5002/api/admin/deactivated',
+                'https://techschope-backend.onrender.com/api/admin/deactivated',
                 {
                     headers: {
                         Authorization: `Bearer ${session.access_token}`
@@ -99,7 +99,7 @@ function AdminDeactivatedAccounts() {
             }
 
             const response = await fetch(
-                `http://localhost:5002/api/admin/reactivate/${contributor.id}`,
+                `https://techschope-backend.onrender.com/api/admin/reactivate/${contributor.id}`,
                 {
                     method: 'POST',
                     headers: {
