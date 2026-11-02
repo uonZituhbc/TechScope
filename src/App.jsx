@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import { Routes, Route, Link } from 'react-router-dom'
 import { supabase } from './lib/supabase'
+import './DashboardMobile.css';
 
 import Explore from './pages/Explore'
 import Topic from './pages/Topic'
