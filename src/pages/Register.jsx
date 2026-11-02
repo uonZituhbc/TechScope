@@ -41,10 +41,11 @@ function Register() {
         email: form.email,
         password: form.password,
         options: {
-          data: {
-            full_name: form.full_name
-          }
-        }
+  data: {
+    full_name: form.full_name
+  },
+  emailRedirectTo: 'https://uonzituhbc.github.io/TechScope/'
+}
       })
 
       if (error) throw error
