@@ -8,8 +8,8 @@ import './App.css'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <BrowserRouter>
-      <App />
-    </BrowserRouter>
+    <BrowserRouter basename="/TechScope">
+  <App />
+</BrowserRouter>
   </StrictMode>,
 )
