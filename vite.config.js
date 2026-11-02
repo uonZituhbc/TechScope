@@ -1,7 +1,40 @@
 import react from '@vitejs/plugin-react'
 import { defineConfig } from 'vite'
+import { VitePWA } from 'vite-plugin-pwa'
 
 export default defineConfig({
-  plugins: [react()],
+  plugins: [
+    react(),
+
+    VitePWA({
+      registerType: 'autoUpdate',
+
+      includeAssets: ['favicon.ico'],
+
+      manifest: {
+        name: 'TechScope - Technology Made Simple',
+        short_name: 'TechScope',
+        description: 'Explore technology, innovation, artificial intelligence, cloud computing and cybersecurity.',
+        theme_color: '#1769d2',
+        background_color: '#ffffff',
+        display: 'standalone',
+        scope: '/TechScope/',
+        start_url: '/TechScope/',
+        icons: [
+          {
+            src: '/TechScope/pwa-192x192.png',
+            sizes: '192x192',
+            type: 'image/png'
+          },
+          {
+            src: '/TechScope/pwa-512x512.png',
+            sizes: '512x512',
+            type: 'image/png'
+          }
+        ]
+      }
+    })
+  ],
+
   base: '/TechScope/',
 })
