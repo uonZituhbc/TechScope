@@ -2,7 +2,6 @@ import { useEffect, useState } from 'react'
 import { Routes, Route, Link } from 'react-router-dom'
 import { supabase } from './lib/supabase'
 import './DashboardMobile.css'
-import './App.css'
 
 import Explore from './pages/Explore'
 import Topic from './pages/Topic'
@@ -105,20 +104,23 @@ const featuredArticles = [
 ]
 
 /* =====================================
-   REUSABLE TECHSCOPE BRAND
+   TECHSCOPE BRAND LOGO
 ===================================== */
 
-function TechScopeLogo() {
+function BrandLogo() {
   return (
-    <Link to="/" className="logo brand-logo">
+    <Link to="/" className="logo logo-with-icon">
       <img
         src="/TechScope/techscope-logo.png"
-        alt="TechScope TS logo"
-        className="brand-logo-icon"
+        alt="TechScope TS Logo"
+        className="logo-mark"
       />
 
-      <span className="brand-logo-text">
-        Tech<span>Scope</span>
+      <span className="logo-text">
+        <span className="logo-name">
+          Tech<span>Scope</span>
+        </span>
+
         <small>TECHNOLOGY MADE SIMPLE</small>
       </span>
     </Link>
@@ -224,7 +226,7 @@ function Home() {
     setPublishedArticles(data || [])
   }
 
-  const contributorArticles = publishedArticles.map(article => ({
+  const contributorArticles = publishedArticles.map((article) => ({
     id: article.id,
     slug: article.slug,
     image: article.featured_image_url,
@@ -248,10 +250,11 @@ function Home() {
 
   return (
     <>
-      {/* HEADER */}
-
       <header className="navbar">
-        <TechScopeLogo />
+
+        {/* TECHSCOPE BRANDING */}
+
+        <BrandLogo />
 
         <nav>
           <Link to="/">Home</Link>
@@ -262,12 +265,13 @@ function Home() {
           <Link to="/contact">Contact</Link>
         </nav>
 
-        <Link to="/register" className="nav-button">
+        <a href="#community" className="nav-button">
           Join Community
-        </Link>
+        </a>
       </header>
 
       <main>
+
         {/* HERO SECTION */}
 
         <section className="hero">
@@ -463,7 +467,10 @@ function Home() {
       {/* FOOTER */}
 
       <footer>
-        <TechScopeLogo />
+        <Link to="/" className="logo">
+          Tech<span>Scope</span>
+          <small>TECHNOLOGY MADE SIMPLE</small>
+        </Link>
 
         <p>
           Exploring technology. Sharing knowledge. Inspiring innovation.

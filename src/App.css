@@ -7754,3 +7754,72 @@ html {
     letter-spacing: 1.3px;
   }
 }
+/* TECHSCOPE HORIZONTAL BRAND LOGO */
+
+.logo-with-icon {
+  display: inline-flex !important;
+  flex-direction: row !important;
+  align-items: center !important;
+  justify-content: flex-start;
+  gap: 10px;
+  text-decoration: none;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.logo-mark {
+  display: block;
+  width: 58px;
+  height: 58px;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+.logo-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  line-height: 1.1;
+}
+
+.logo-name {
+  display: block;
+  font-size: 29px;
+  font-weight: 800;
+  color: #142b4e;
+  line-height: 1.1;
+}
+
+.logo-name > span {
+  color: #1769d2;
+}
+
+.logo-text small {
+  display: block;
+  margin-top: 5px;
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+  color: #718096;
+}
+
+@media (max-width: 650px) {
+  .logo-mark {
+    width: 46px;
+    height: 46px;
+  }
+
+  .logo-name {
+    font-size: 23px;
+  }
+
+  .logo-text small {
+    font-size: 7px;
+    letter-spacing: 1px;
+  }
+
+  .logo-with-icon {
+    gap: 7px;
+  }
+}
