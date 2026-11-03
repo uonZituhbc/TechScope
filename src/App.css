@@ -7697,3 +7697,60 @@ html {
     height: 220px;
   }
 }
+/* TECHSCOPE LOGO WITH BRAND NAME */
+
+.brand-logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+  flex-shrink: 0;
+}
+
+.brand-logo-icon {
+  width: 68px;
+  height: 68px;
+  object-fit: contain;
+  display: block;
+}
+
+.brand-logo-text {
+  display: flex;
+  flex-direction: column;
+  color: #142b4e;
+  font-size: 27px;
+  font-weight: 800;
+  line-height: 1.05;
+}
+
+.brand-logo-text > span {
+  color: #1769d2;
+}
+
+.brand-logo-text small {
+  margin-top: 8px;
+  color: #8996a8;
+  font-size: 10px;
+  font-weight: 750;
+  letter-spacing: 2px;
+}
+
+@media (max-width: 650px) {
+  .brand-logo {
+    gap: 8px;
+  }
+
+  .brand-logo-icon {
+    width: 55px;
+    height: 55px;
+  }
+
+  .brand-logo-text {
+    font-size: 23px;
+  }
+
+  .brand-logo-text small {
+    font-size: 8px;
+    letter-spacing: 1.3px;
+  }
+}

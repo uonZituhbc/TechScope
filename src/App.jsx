@@ -1,7 +1,8 @@
 import { useEffect, useState } from 'react'
 import { Routes, Route, Link } from 'react-router-dom'
 import { supabase } from './lib/supabase'
-import './DashboardMobile.css';
+import './DashboardMobile.css'
+import './App.css'
 
 import Explore from './pages/Explore'
 import Topic from './pages/Topic'
@@ -104,9 +105,28 @@ const featuredArticles = [
 ]
 
 /* =====================================
+   REUSABLE TECHSCOPE BRAND
+===================================== */
+
+function TechScopeLogo() {
+  return (
+    <Link to="/" className="logo brand-logo">
+      <img
+        src="/TechScope/techscope-logo.png"
+        alt="TechScope TS logo"
+        className="brand-logo-icon"
+      />
+
+      <span className="brand-logo-text">
+        Tech<span>Scope</span>
+        <small>TECHNOLOGY MADE SIMPLE</small>
+      </span>
+    </Link>
+  )
+}
+
+/* =====================================
    HOMEPAGE GALLERY
-   Three static images + latest public
-   images uploaded by the administrator.
 ===================================== */
 
 function HomepageGallery() {
@@ -228,11 +248,10 @@ function Home() {
 
   return (
     <>
+      {/* HEADER */}
+
       <header className="navbar">
-        <Link to="/" className="logo">
-          Tech<span>Scope</span>
-          <small>TECHNOLOGY MADE SIMPLE</small>
-        </Link>
+        <TechScopeLogo />
 
         <nav>
           <Link to="/">Home</Link>
@@ -243,9 +262,9 @@ function Home() {
           <Link to="/contact">Contact</Link>
         </nav>
 
-        <a href="#community" className="nav-button">
+        <Link to="/register" className="nav-button">
           Join Community
-        </a>
+        </Link>
       </header>
 
       <main>
@@ -444,10 +463,7 @@ function Home() {
       {/* FOOTER */}
 
       <footer>
-        <Link to="/" className="logo">
-          Tech<span>Scope</span>
-          <small>TECHNOLOGY MADE SIMPLE</small>
-        </Link>
+        <TechScopeLogo />
 
         <p>
           Exploring technology. Sharing knowledge. Inspiring innovation.
